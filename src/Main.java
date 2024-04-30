@@ -1,20 +1,19 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-
     public static void main(String[] args) {
-        BonusMilesService  service = new BonusMilesService();
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price); // должно получиться 500
+        System.out.println("Количество миль: " + miles);
 
-        System.out.println();
-        System.out.println("Количество миль: ");
-        System.out.println(service.calculate(10000));
+        price = 5_000;
+        miles = service.calculate(price); // должно получиться 250
+        System.out.println("Количество миль: " + miles);
 
-        System.out.println();
-        System.out.println("Количество миль: ");
-        System.out.println(service.calculate(20000));
-
-        System.out.println();
-        System.out.println("Количество миль: ");
-        System.out.println(service.calculate(1020));
+        price = 6_000;
+        miles = service.calculate(price); // должно получиться 250
+        miles = service.calculate(price);
+        System.out.println("Количество миль: " + miles);
     }
 }
