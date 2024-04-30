@@ -11,9 +11,8 @@ public class Main {
         miles = service.calculate(price); // должно получиться 250
         System.out.println("Количество миль: " + miles);
 
-        price = 6_000;
-        miles = service.calculate(price); // должно получиться 250
-        miles = service.calculate(price);
+        price = 1_000;
+        miles = service.calculate(price); // должно получиться 50
         System.out.println("Количество миль: " + miles);
     }
 }
